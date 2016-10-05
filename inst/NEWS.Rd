@@ -4,6 +4,7 @@
 \section{Changes in gamboostLSS version 1.2-1 (2016-03-11)}{
   \subsection{User-visible changes}{
     \itemize{
+      \item Changed default \code{off2int = TRUE} inside \code{coef.glmboostLSS()}. 
       \item Speed up computations by using \code{response(fitted())}
       instead of \code{fitted(, type = response)} as the latter uses
       \code{predict()}. Closes issue

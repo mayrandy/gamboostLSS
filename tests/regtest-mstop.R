@@ -148,5 +148,5 @@ nus <- list(mu = 0, sigma = 0.2)
 model <- glmboostLSS(y ~ ., families = NBinomialLSS(), data = dat,
                       control = boost_control(mstop = 10, nu = nus, trace = TRUE),
                       center = TRUE)
-stopifnot(all(coef(model)[[1]] == 0))
-stopifnot(any(coef(model)[[2]] != 0))
+stopifnot(all(coef(model, off2int = FALSE)[[1]] == 0))
+stopifnot(any(coef(model, off2int = FALSE)[[2]] != 0))

@@ -50,7 +50,7 @@
 ### extract coefficients
 \method{coef}{glmboostLSS}(object, which = NULL,
      aggregate = c("sum", "cumsum", "none"),
-     off2int = FALSE, parameter = names(object), ...)
+     off2int = TRUE, parameter = names(object), ...)
 \method{coef}{mboostLSS}(object, which = NULL,
      aggregate = c("sum", "cumsum", "none"),
      parameter = names(object), ...)
@@ -122,8 +122,7 @@ PI(x, which, pi = 0.9, newdata = NULL, ...)
      details. Per default all distribution parameters of the GAMLSS family are
      returned. }
   \item{off2int}{ logical indicating whether the offset should be
-    added to the intercept (if there is any) or if the offset is
-    neglected for plotting (default).}
+    added to the intercept (if there is any).}
   \item{merge}{ logical. Should the risk vectors of the single
     components be merged to one risk vector for the model in total? Per
     default (\code{merge = FALSE}) a (named) list of risk vectors is

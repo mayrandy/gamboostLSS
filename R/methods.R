@@ -23,7 +23,7 @@ coef.mboostLSS <- function(object, which = NULL,
 
 coef.glmboostLSS <- function(object, which = NULL,
                              aggregate = c("sum", "cumsum", "none"),
-                             off2int = FALSE, parameter = names(object), ...){
+                             off2int = TRUE, parameter = names(object), ...){
     coef.mboostLSS(object, which = which, aggregate = aggregate,
                    parameter = parameter, off2int = off2int, ...)
 }
